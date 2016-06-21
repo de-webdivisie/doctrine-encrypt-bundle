@@ -1,0 +1,6 @@
+services:
+  wdnl.doctrine_encrypt.aes256_encryptor:
+    class: Wdnl\DoctrineEncryptBundle\Encryptor\Aes256Encryptor
+    arguments:
+      - "%wdnl_doctrine_encrypt.encryption_key%"
+      - "%wdnl_doctrine_encrypt.encryption_salt%"

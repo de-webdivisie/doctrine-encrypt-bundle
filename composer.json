@@ -1,0 +1,21 @@
+{
+  "name": "de-webdivisie/doctrine-encrypt-bundle",
+  "type": "symfony-bundle",
+  "description": "Adds encrypted type to Doctrine column types.",
+  "license": "Apache-2.0",
+  "require": {
+    "php": "^7.0.0",
+    "ext-mcrypt": "*",
+    "symfony/symfony": "2.7.0 - 3.2.0",
+    "doctrine/dbal": "^2.5.4"
+  },
+  "autoload": {
+    "psr-4": { "Wdnl\\DoctrineEncryptBundle\\": "" }
+  },
+  "authors": [
+    {
+      "name": "Ivo van Beek",
+      "email": "ivo@dewebdivisie.nl"
+    }
+  ]
+}
