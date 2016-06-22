@@ -74,7 +74,7 @@ class Encrypted extends Type
         array $fieldDeclaration,
         AbstractPlatform $platform
     ) {
-        return $platform->getVarcharTypeDeclarationSQL($fieldDeclaration);
+        return $platform->getBlobTypeDeclarationSQL($fieldDeclaration);
     }
 
     /**
