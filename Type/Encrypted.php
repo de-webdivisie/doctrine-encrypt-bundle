@@ -34,14 +34,14 @@ class Encrypted extends Type
      * @param mixed            $value
      * @param AbstractPlatform $platform
      *
-     * @return null|string
-     *
      * @throws MissingEncryptorException
+     *
+     * @return null|string
      */
     public function convertToPHPValue($value, AbstractPlatform $platform)
     {
         if (null === $value) {
-            return null;
+            return;
         }
 
         return $this->getEncryptor()->decrypt($value);
@@ -51,14 +51,14 @@ class Encrypted extends Type
      * @param mixed            $value
      * @param AbstractPlatform $platform
      *
-     * @return string|null
-     *
      * @throws MissingEncryptorException
+     *
+     * @return string|null
      */
     public function convertToDatabaseValue($value, AbstractPlatform $platform)
     {
         if (null === $value) {
-            return null;
+            return;
         }
 
         return $this->getEncryptor()->encrypt($value);
@@ -78,9 +78,9 @@ class Encrypted extends Type
     }
 
     /**
-     * @return EncryptorInterface
-     *
      * @throws MissingEncryptorException
+     *
+     * @return EncryptorInterface
      */
     public function getEncryptor()
     {
